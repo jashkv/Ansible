@@ -1,0 +1,7 @@
+
+Check sytex in playbook
+ansible-playbook --syntax-check- playbookname
+
+check dry run
+ansible-playbook -check- playbookname
+

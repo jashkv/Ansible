@@ -1,0 +1,12 @@
+# This Playbook to print Varibles
+---
+- name : Printing Varible
+  hosts: localhost
+  vars:
+    nam: "Jash"
+    age: 23
+  tasks:
+    - name: Print name and age
+      ansible.builtin.debug:
+        msg: "Hello there my name is : {{ nam }}, and I am {{ age }} year old"
+

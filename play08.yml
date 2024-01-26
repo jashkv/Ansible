@@ -1,0 +1,12 @@
+# this playbook is to install software in localhost
+
+---
+- name : Playbook to install python on localost
+  hosts: localhost
+  become : true 
+
+  tasks:
+    - name : install python
+      package:
+        name : python3
+        state : present

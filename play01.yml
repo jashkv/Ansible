@@ -1,0 +1,9 @@
+# This is the first playbook just to perint Hello World massage
+---
+- name : Playbook to print hello world
+  hosts: localhost
+
+  tasks:
+    - name: Print Hello World
+      ansible.builtin.debug:
+        msg: "Hello, World!"

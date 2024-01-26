@@ -1,0 +1,14 @@
+# Eecuting Shell Commands
+---
+- name: Executing Shell commands on localhost
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Execute shell command
+      ansible.builtin.shell: date # any command
+      register: output
+    
+    - name: Print command output
+      ansible.builtin.debug:
+        msg: "The command output is {{ output.stdout }}"
+

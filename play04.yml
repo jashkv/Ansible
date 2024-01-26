@@ -1,0 +1,15 @@
+# This Playbook to print Varibles from command line
+---
+- name : Printing Varible
+  hosts: localhost
+  vars:
+    nam: "Jash"
+    age: 23
+  tasks:
+    - name: Print name and age
+      ansible.builtin.debug:
+        msg: "Hello there my name is : {{ nam }}, and I am : {{ age }} year old"
+
+
+#command to run the file with extra verible
+#ansible-playbook --extra-vars='{"nam":"Aman","age":30}' play04.yml

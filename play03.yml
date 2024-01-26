@@ -1,0 +1,17 @@
+# Playbook to pause the execution for 10 second
+
+---
+- name : Pause Execution
+  hosts : localhost
+  vars : 
+    wait_sec : 10
+
+  tasks : 
+    - name : Pause the Execution for 10 second
+      ansible.builtin.pause:
+        seconds : "{{ wait_sec  | int }}"
+
+    - name : massage
+      ansible.builtin.debug:
+        msg : "Execution Completed"
+

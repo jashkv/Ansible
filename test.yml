@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Execute shell command
+      ansible.builtin.shell: date
+      register: output
+    
+    - name: Print command output
+      ansible.builtin.debug:
+        msg: "The command output is {{ output.stdout }}"

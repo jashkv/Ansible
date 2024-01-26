@@ -1,0 +1,14 @@
+# Playbook to prin inventory hostnames
+---
+- name: Hostname
+  hosts: localhost
+  gather_facts: true
+
+  tasks:
+    - name: print inventory_hostname
+      ansible.builtin.debug:
+        var: inventory_hostname
+
+    - name: print ansible_hostname
+      ansible.builtin.debug:
+        var: ansible_hostname

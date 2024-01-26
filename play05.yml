@@ -1,0 +1,25 @@
+# This Playbook is to printmuilti line strings
+
+---
+- name : Print Muiltilines
+  hosts : localhost
+  vars:
+    vari1: |-
+      This is a multi line string
+      and I really Dont know 
+      which massage I want to print on it
+      oh sucks!!!
+
+    vari2: >- 
+      This is a new massage generated via AI powerd humane 
+      who enjoyed his ompany along with him
+      so fuck off the world
+
+  tasks :
+    - name : Print Verible 1
+      ansible.builtin.debug:
+        var: vari1
+
+    - name : Print Verible 2
+      ansible.builtin.debug:
+        var: vari2
